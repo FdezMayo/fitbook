@@ -20,3 +20,7 @@ Sustituye `app.js` por la nueva versión y vuelve a desplegar (o haz push al rep
 
 ## Instalar en el móvil
 Abre la URL en Chrome (Android) o Safari (iPhone) → menú → «Añadir a pantalla de inicio».
+
+## Contraseña
+- La app pide la contraseña al entrar (se recuerda en ese navegador). Es un candado de interfaz: quien mire el código fuente podría verla.
+- Para una protección real en el servidor: en Vercel → Project → Settings → Environment Variables añade `FITBOOK_PASSWORD` con la contraseña que quieras y vuelve a desplegar. `middleware.js` pedirá esa contraseña (el usuario da igual) antes de descargar nada.
