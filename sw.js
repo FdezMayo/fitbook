@@ -1,5 +1,5 @@
 // Fitbook service worker: red primero, caché como respaldo sin conexión.
-const CACHE = 'fitbook-v5';
+const CACHE = 'fitbook-v6';
 const CORE = ['./', 'index.html', 'app.js', 'runtime.js', 'preact.min.js', 'jspdf.umd.min.js', 'favicon.svg', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).catch(() => {}).then(() => self.skipWaiting()));
